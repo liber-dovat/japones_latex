@@ -1,0 +1,184 @@
+\documentclass[a4paper,12pt,oneside]{report}
+
+%----------------------------------------------
+% Preambulo
+
+\usepackage{colorful_color}
+\usepackage{tikz}
+\usepackage{CJKutf8}
+
+\usepackage[CJK, overlap]{ruby}
+\renewcommand{\rubysep}{-0.2ex}
+
+\def\then{\Longrightarrow}
+
+\def\v2{$\mathrm{V}_2$}
+
+%----------------------------------------------
+% Documento
+
+\begin{document}
+\begin{CJK*}{UTF8}{min}%[dnp]{JIS}{min}
+
+  %----------------------------------------------
+  % Titulo
+
+  %\CJKfamily{goth}
+  %\CJKfamily{maru}
+
+  \title{
+    \begin{flushright}
+      \Huge  日本語\\
+      \LARGE \ColDarkBlue{Guía del curso}
+    \end{flushright}
+  } % \title
+
+  \author{\vspace{7cm}\\
+    v0.2\\
+    Compilado por Liber Dovat\\
+    el \today\\
+  } % \author
+
+  \date{}
+  \maketitle
+
+  \newpage
+
+  %----------------------------------------------
+  %Indice
+
+  \pagenumbering{Roman}
+  \tableofcontents
+  \thispagestyle{plain}
+
+  \newpage
+
+  %----------------------------------------------
+  % Contenido
+
+  \pagenumbering{arabic}
+
+  %============================================== Capitulo 1
+
+  \chapter{Introducci\'on}
+  \thispagestyle{contenido} % no sacar
+  \pagestyle{contenido}     % no sacar
+
+    れいぞうこ　の中に　たまご　や\ruby{肉}{にく}など　が　あります。「や、など」
+    \\
+
+    より: Comparación efectiva entre cosas
+    \\
+
+    のほうが: Comparación de gustos
+    \\
+
+  %============================================== Capitulo 1 - End
+
+  %============================================== Capitulo 2
+
+  \chapter{Japon\'es 2}
+  \thispagestyle{contenido} % no sacar
+  \pagestyle{contenido}     % no sacar
+
+    \section{Lección 16}
+
+      \subsubsection{Secuencial, dos o mas verbos ocurren en secuencia:}
+      \fbox{$\mathrm{V}_1$(て)、\v2(て)、。。。、$\mathrm{V}_3$(ます)}
+      \\
+
+      カルロすさん　は　あさ、ジョギング　を　して、シャワー　を　あびて、大学へ行きます。\\
+      \indent Carlos corre por la mañana, se da un baño, y va a la facultad.
+      \\
+
+      \subsubsection{Acciones que se realizan luego de concluir otra:}
+      \fbox{$\mathrm{V}_1$(て)から、\v2(ます)}
+      \\
+
+      ふるさと　へ　かえって　から、父の\ruby{会社}{かいしゃ}で　はたらきます。\\
+      \indent Después de volver a mi pueblo natal, voy a trabajar en la empresa de mi padre.
+      \\
+
+      えいが　が　おわって　から、レストラン　で\ruby{食事}{しょくじ}しました。\\
+      \indent Después de terminar la película, fui a comer a un restorán.
+
+    \section{Lección 17}
+
+      \subsubsection{Indicar que no haga algo:}
+      \fbox{V(ない) + ないで　ください}
+      \\
+
+      ここ　で　しゃしん　を　とらない　で　ください。\\
+      \indent No saque fotos aquí.
+
+      \subsubsection{Algo debe hacerse, por obligación o sin la voluntad:}
+      \fbox{V(ない) + なければ　なりません}
+      \\
+
+      しゅくだい　を　しなければ　なりません。\\
+      \indent Debo hacer los deberes.
+
+      \subsubsection{No es necesario hacer algo:}
+      \fbox{V(ない) + なくても　いいです}
+      \\
+
+      お金を　はわらなくても　いいです。\\
+      \indent No es necesario que pague.
+
+      \subsubsection{Medios o situación al realizar una acción:}
+      \fbox{$\mathrm{V}_1$(て)、\v2}
+      \\
+
+      コーヒー　に　さとう　を　入れて　\ruby{飲}{の}みます。\\
+      \indent Tomo caf\'e con azúcar.
+　　　　\\
+
+      私は　いつも　たって　アイロン　を　かけます。\\
+      \indent Siempre plancho parado.
+
+      \subsubsection{Medios o situación al realizar una acción con forma negativa:}
+      \fbox{$\mathrm{V}_1$(ない) + ないで、\v2}
+      \\
+
+      は　を　みがかないで　ねました。\\
+      \indent Me acost\'e sin lavarme los dientes.
+      \\
+
+      さとう　入れないで、コーヒー　を　\ruby{飲}{の}みました。\\
+      \indent Tom\'e el caf\'e sin az\'ucar.
+
+
+  %============================================== Capitulo 2 - End
+
+  %============================================== Capitulo Kanji
+
+  \chapter{Kanji}
+  \thispagestyle{contenido} % no sacar
+  \pagestyle{contenido}     % no sacar
+
+  \begin{tikzpicture}
+    \node[scale=5] {月};
+  \end{tikzpicture}
+
+  \begin{tikzpicture}
+    \node[scale=5] {金};
+  \end{tikzpicture}
+
+  %============================================== Bibliografia
+
+%   \begin{thebibliography}{20}
+%
+%     \thispagestyle{biblio} % no sacar
+%     \pagestyle{biblio}     % no sacar
+%
+%     \bibitem{maggiolo}
+%     Oscar Maggiolo,
+%     Cap\'itulo \emph{Pol\'itica de desarrollo cient\'ifico y tecnol\'ogico de Am\'erica Latina},
+%     perteneciente al texto \emph{Reflexiones sobre la investigaci\'on cient\'ifica}.
+%
+%   \end{thebibliography}
+
+  %============================================== Bibliografia - End
+
+\end{CJK*}
+\end{document}

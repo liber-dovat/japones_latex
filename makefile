@@ -12,14 +12,12 @@ NAME=japones
 # Compiladores y programas
 PDFLATEX = pdflatex
 
-COLORFUL=colorful_color.sty colorful_bw.sty
-
 # Otras opciones
 OPCIONESLATEX =
 
 all: $(NAME).pdf
 
-$(NAME).pdf: $(NAME).tex $(COLORFUL) makefile
+$(NAME).pdf: $(NAME).tex colorful.sty makefile
 	$(PDFLATEX) $(OPCIONESLATEX) $(NAME).tex
 	$(PDFLATEX) $(OPCIONESLATEX) $(NAME).tex
 

@@ -1,0 +1,252 @@
+% colorful
+% Author Liber Dovat
+
+\ProvidesPackage{colorful}
+
+%----------------------------------------------
+
+% color options
+% blue (default option)
+\DeclareOption{color}{}
+
+% blanco y negro
+\newif\if@bw\@bwfalse
+\DeclareOption{bw}{\@bwtrue}
+
+% unused options
+\DeclareOption*{
+  \PackageWarning{colorful}{Unknown option ‘\CurrentOption’}}
+
+% execute default options
+\ExecuteOptions{color}
+
+% process given options
+\ProcessOptions\relax
+
+%----------------------------------------------
+
+% Para que setee las palabras automaticas al espanol (capitulo, indice, etc)
+\usepackage[spanish]{babel}
+
+% Para poder escribir con chirimbolos raros como letras con tildes y eñes.
+%\usepackage[utf8]{inputenc}
+
+%----------------------------------------------
+
+% Para agregar enlaces dinamicos
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = black,
+  citecolor  = black,
+  filecolor  = black,
+  urlcolor   = black
+}
+
+%----------------------------------------------
+% Fuentes
+
+% Para usar la fuente times, tambien con serif
+%\usepackage{times}
+
+% Para usar la fuente sans (sin serif)
+%\usepackage{sans}
+
+% Para utilizar una fuente sans-serif
+%\renewcommand{\familydefault}{\sfdefault}
+
+%----------------------------------------------
+
+% Para hacer rotaciones
+\usepackage{rotating}
+\usepackage[center]{caption}
+
+%----------------------------------------------
+
+\usepackage[left=4cm,top=3cm,right=3cm,bottom=3cm]{geometry}
+
+%----------------------------------------------
+
+% Para incluir imagenes, diagramas y esas cosas.
+\usepackage{graphicx}
+
+%----------------------------------------------
+
+\newcommand{\Titulo}{Japon\'es}
+\newcommand{\Subtitulo}{Resumen}
+
+% Los paquetes de fancy header
+\usepackage{fancyhdr}
+
+%=============================================
+
+% Redefino el estilo de pagina plain para que sea la plantilla de indice
+\fancypagestyle{plain}{%
+\lhead{\footnotesize \bfseries \ColCabezal{\Titulo}}
+\chead{}
+\rhead{\footnotesize \bfseries \ColCabezal{\Subtitulo}}
+\lfoot{}
+\cfoot{}
+\rfoot{\textbf{%
+        \begin{tabular}{r}
+          \begin{rotate}{90}
+            \Large
+            \ColSeccion{$|$}%
+            \normalsize
+            \ColCapitulo{\'Indice}%
+          \end{rotate}\\
+          \Large \ColPagina{\thepage}\\
+        \end{tabular}
+       } % \textbf
+      } % \rfoot
+} % \fancypagestyle{plain}
+
+%=============================================
+
+% Creo un estilo nuevo con la informacion que usan las paginas del documento
+% Tengo que recordar siempre que se deben setear \thispagestyle y \pagestyle luego
+% de declarado cada capitulo
+\fancypagestyle{contenido}{%
+\lhead{\footnotesize \bfseries \ColCabezal{\Titulo}}
+\chead{}
+\rhead{\footnotesize \bfseries \ColCabezal{\Subtitulo}}
+\lfoot{}
+\cfoot{}
+\rfoot{\textbf{
+        \begin{tabular}{r}
+          \begin{rotate}{90}
+            \Large
+            \ColSeccion{$|$}%
+            \normalsize
+            \ColCapitulo{Cap\'itulo:}%
+            \ColSeccion{\leftmark}%
+          \end{rotate}\\
+          \Large \ColPagina{\thepage}\\
+        \end{tabular}
+       } % \textbf
+      } % \rfoot
+}% \fancypagestyle{contenido}
+
+%=============================================
+
+% Creo un estilo nuevo con la informacion que usan las paginas del documento
+% Tengo que recordar siempre que se deben setear \thispagestyle y \pagestyle luego
+% de declarado cada capitulo
+\fancypagestyle{biblio}{%
+\lhead{\footnotesize \bfseries \ColCabezal{\Titulo}}
+\chead{}
+\rhead{\footnotesize \bfseries \ColCabezal{\Subtitulo}}
+\lfoot{}
+\cfoot{}
+\rfoot{\textbf{
+        \begin{tabular}{r}
+          \begin{rotate}{90}
+            \Large
+            \ColSeccion{$|$}%
+            \normalsize
+            \ColCapitulo{Bibliograf\'ia}%
+          \end{rotate}\\
+          \Large \ColPagina{\thepage}\\
+        \end{tabular}
+       } % \textbf
+      } % \rfoot
+}% \fancypagestyle{contenido}
+
+%=============================================
+
+\fancyfootoffset{50pt}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%----------------------------------------------
+
+% Defino los colores que voy a usar
+
+% default color
+\usepackage{color, colortbl}
+\definecolor{Pagina}{RGB}{79,132,198}     % Numero de pagina
+\definecolor{Seccion}{RGB}{83,143,212}    % Linea y Seccion al pie
+\definecolor{Capitulo}{RGB}{54,96,145}    % Capitulo, Seccion y subtitulo del documento
+\definecolor{Cabezal}{RGB}{150,180,216}   % cabezal
+
+% Grises
+\if@bw
+  \definecolor{Pagina}{RGB}{0,0,0}        % Numero de pagina
+  \definecolor{Seccion}{RGB}{137,137,137} % Linea y Seccion al pie
+  \definecolor{Capitulo}{RGB}{88,88,88}   % Capitulo, Seccion y subtitulo del documento
+  \definecolor{Cabezal}{RGB}{189,189,189} % cabezal
+\fi % if
+
+%===
+
+\newcommand{\ColPagina}[1]{%
+  {\color{Pagina}{#1}}
+} % ColPagina
+
+\newcommand{\ColSeccion}[1]{%
+  {\color{Seccion}{#1}}
+} % ColSeccion
+
+\newcommand{\ColCapitulo}[1]{%
+  {\color{Capitulo}{#1}}
+} % ColCapitulo
+
+\newcommand{\ColCabezal}[1]{%
+  {\color{Cabezal}{#1}}
+} % ColCabezal
+
+%----------------------------------------------
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+
+% Para no escribir la palabra "capitulo"
+\addto\captionsspanish{\renewcommand\chaptername{}}
+
+% Para no escribir el numero del capitulo
+\renewcommand{\thechapter}{}
+
+% Para escribir los numeros de las secciones correctamente
+% el numero de seccion es: #capitulo.#seccion
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+
+%----------------------------------------------
+
+% Marginpar: asi se usa
+% \marginpar{This is the new marginpar command. This is the new marginpar command.}
+\setlength{\marginparwidth}{1.0in}
+\let\oldmarginpar\marginpar%
+\renewcommand\marginpar[1]{%
+  \-\oldmarginpar[\raggedleft\scriptsize #1]%
+  {\raggedright\scriptsize #1}%
+} % \renewcommand\marginpar
+
+%----------------------------------------------
+
+%   \title{}
+%   \author{}
+%   \date{}
+%   \maketitle
+%
+%   \newpage
+%
+%   %----------------------------------------------
+%   %Indice
+%
+%   \pagenumbering{Roman}
+%   \tableofcontents
+%   \thispagestyle{plain}
+%
+%   \newpage
+%
+%   %----------------------------------------------
+%   % Contenido
+%
+%   \pagenumbering{arabic}
+%
+%   %============================================== Capitulo 1
+%
+%   \chapter{}
+%   \thispagestyle{contenido}
+%   \pagestyle{contenido}

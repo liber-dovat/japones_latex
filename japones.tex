@@ -3,20 +3,29 @@
 %----------------------------------------------
 % Preambulo
 
-\usepackage{colorful_color}
+\usepackage{colorful}
+%\usepackage[bw]{colorful}
 \usepackage{tikz}
+
+% para usar las bullets redondas para marcar los elementos de las listas
+% \renewcommand{\labelitemi}{$\bullet$}
+
 \usepackage{CJKutf8}
 
 \usepackage[CJK, overlap]{ruby}
 \renewcommand{\rubysep}{-0.2ex}
 
-\def\then{\Longrightarrow}
+\def\to{$\longrightarrow$}
 
-\def\vb{\textbf{V}}       % verbo bold
+\def\bv{\textbf{V}} % bold verb
+\def\bs{\textbf{S}} % bold sustantive
+\def\adj{\textbf{adj}} % bold adjective
 
-\def\vi{$\mathrm{\vb}_1$} % verbo ichi
-\def\vn{$\mathrm{\vb}_2$} % verbo ni
-\def\vs{$\mathrm{\vb}_3$} % verbo san
+\def\vi{$\mathrm{\bv}_1$} % verbo ichi
+\def\vn{$\mathrm{\bv}_2$} % verbo ni
+\def\vs{$\mathrm{\bv}_3$} % verbo san
+\def\vene{$\mathrm{\bv}_\mathrm{\textbf{n}}$} % verbo ene
+\def\tenten{。。。}
 
 %----------------------------------------------
 % Documento
@@ -33,12 +42,12 @@
   \title{
     \begin{flushright}
       \Huge  日本語\\
-      \LARGE \ColDarkBlue{Guía del curso}
+      \LARGE \ColCapitulo{Gu\'ia del curso}
     \end{flushright}
   } % \title
 
   \author{\vspace{7cm}\\
-    v0.3\\
+    v0.5\\
     Compilado por Liber Dovat\\
     el \today\\
   } % \author
@@ -62,101 +71,473 @@
 
   \pagenumbering{arabic}
 
-  %============================================== Capitulo 1
+%========================================
 
-  \chapter{Introducci\'on}
-  \thispagestyle{contenido} % no sacar
-  \pagestyle{contenido}     % no sacar
+%   \chapter{Introducci\'on}
+%   \thispagestyle{contenido} % no sacar
+%   \pagestyle{contenido}     % no sacar
+%
+%     れいぞうこ　の中に　たまご　や\ruby{肉}{にく}など　が　あります。「や、など」
+%     \\
+%
+%     より: Comparación efectiva entre cosas
+%     \\
+%
+%     のほうが: Comparación de gustos
+%     \\
 
-    れいぞうこ　の中に　たまご　や\ruby{肉}{にく}など　が　あります。「や、など」
-    \\
-
-    より: Comparación efectiva entre cosas
-    \\
-
-    のほうが: Comparación de gustos
-    \\
-
-  %============================================== Capitulo 1 - End
-
-  %============================================== Capitulo 2
+%========================================
 
   \chapter{Japon\'es 2}
   \thispagestyle{contenido} % no sacar
   \pagestyle{contenido}     % no sacar
 
+    \section{Lección 14 - Forma て (て\ruby{形}{けい})}
+
+        \subsubsection{Grupo 1}
+        \begin{tabular}{ | l | l | }
+          \hline
+          \cellcolor[gray]{0.9} Forma ます & \cellcolor[gray]{0.9} Forma て\\
+          \hline
+          きます　& きいて\\
+          \hline
+        \end{tabular}
+
+      \subsubsection{Solicitar, dar instrucciones o consejos:}
+        \fbox{\bv(て) + ください}
+
+        \begin{itemize}
+          \item すみませんが、かんじの　よみ方を　おひえてください。\\
+                Disculpe, >Podr\'ia enseñarme c\'omo leer kanji? (solicitud)
+          \item ぜひ　あそびに　\ruby{来}{き}て　ください。\\
+                No deje de visitarnos. (invitaci\'on)
+          \item ここに　でんわばんごうと　なまえを　かいて　ください。\\
+                Escriba aqu\'i su n\'umero de tel\'efono y su nombre, por favor. (instrucci\'on)
+        \end{itemize}
+
+      \subsubsection{Conjugaci\'on, progreso de la acci\'on:}
+        \fbox{\vi(て) + います}
+
+        \begin{itemize}
+          \item マリアさん　は　パブロさんと　はなして　います。\\
+                Mar\'ia est\'a hablando con Pablo.
+          \item
+            \begin{itemize}
+              \item[-] 今　雨が　ふって　いますか。\\
+                       >Ahora est\'a lloviendo?
+              \item[-] はい、ふって　います。\\
+                       S\'i, est\'a lloviendo.
+            \end{itemize}
+        \end{itemize}
+
+      \subsubsection{Ofrecerce para realizar una acci\'on:}
+        \fbox{\bv ましょうか}
+
+        \begin{itemize}
+          \item
+            \begin{itemize}
+              \item[-] あついですね、まど　を　あけましょうか。\\
+                       Hace calor, >no? >Abro la ventana?
+              \item[-] はい、おねがいします。\\
+                       S\'i, por favor.
+            \end{itemize}
+          \item
+            \begin{itemize}
+              \item[-] にもつ　を　もちましょうか。\\
+                       >Le llevo la valija?
+              \item[-] いいえ、けっこうです。\\
+                       No, est\'a bien.
+            \end{itemize}
+        \end{itemize}
+
+      \subsubsection{Realizar dos acciones simultaneamente:}
+        \fbox{\vi(ます) + ながら、\vn}
+
+        \begin{itemize}
+          \item \ruby{音楽}{おんがく}　を　ききながら　\ruby{食事}{しょくじ}します。\\
+                Como escuchando m\'usica.
+          \item コーヒー　を　おみながら　べんきょうします。\\
+                Estudio tomando caf\'e.
+        \end{itemize}
+        \hfill
+
+        Tambi\'en se utiliza para acciones que contin\'uan permanentemente
+
+          \begin{itemize}
+            \item はたらきながら　日本語　を　べんきょうします。\\
+                  Estoy trabajando y estudiando japon\'es.
+          \end{itemize}
+
+%========================================
+
+    \section{Lección 15}
+
+      \subsubsection{Se puede; dar permiso:}
+        \fbox{\bv(て) も　いいです}
+
+        \subparagraph{Permiso:}
+
+        \begin{itemize}
+          \item ノート　を　見てもいいです。\\
+                Se puede mirar el cuaderno.
+        \end{itemize}
+
+        \subparagraph{Pedir permiso:}
+
+        \begin{itemize}
+          \item
+            \begin{itemize}
+              \item[-] たばこ　を　すっても　いいですか。\\
+                       >Se puede fumar?
+              \item[-] いいえ、だめです。ここは　きんえんです。\\
+                       No, no se puede. Aqu\'i est\'a prohibido.
+            \end{itemize}
+          \item
+            \begin{itemize}
+              \item[-] この　せき　に　すわっても　いいですか。\\
+                       >Me puedo sentar en esta silla?
+              \item[-] ええ、いいですよ。どうぞ。\\
+                       Si, est\'a bien. Adelante.
+              \item[-] \ruby{住}{す}みません。ちょっと。\\
+                       Lo siento, pero \ldots
+            \end{itemize}
+        \end{itemize}
+
+      \subsubsection{No se puede:}
+        \fbox{\bv(て) は　いけません}
+
+        \begin{itemize}
+          \item バス　の　中で　たばこ　を　すわって　は　いけません。\\
+                Est\'a prohibido fumar dentro del autob\'us.
+          \item ここに　車　を　止めて　は　いけません。\\
+                Est\'a prohibido estacionar aqu\'i.
+        \end{itemize}
+
+      \subsubsection{Acci\'on cont\'inua en el tiempo:}
+        O resultado de una acci\'on pasada:\\
+
+        \fbox{\bv(て) います}
+
+        \begin{itemize}
+          \item \ruby{木村}{きむら}先生は　けっこんしています。\\
+                La profesora Kimura est\'a casada.
+          \item 私は　田中さん　を　しっています。\\
+                Conozco al Sr. Tanaka.
+          \item パブロさん　は　カネローネス　に　住んでいます。\\
+                Pablo vive en Canelones.
+          \item 私は　カメラ　を　持っていあす。\\
+                Tengo una c\'amara.
+          \item マリアさん　は　すわっています。\\
+                Mar\'ia est\'a sentada.
+          \item まど　は　あいています。\\
+                La ventana est\'a abierta.
+        \end{itemize}
+
+        \subparagraph{Atenci\'on:}
+          La negaci\'on del verbo 「しっています」 es 「しりません」.\\
+
+        En $1)$ vemos un ejemplo de acci\'on cont\'inua en el tiempo, y en $2)$ una acci\'on que sucedi\'o en el pasado pero a\'un perduran sus resultados:
+
+        \begin{enumerate}
+          \item 本　を　よんでいます。\\
+                Leo un libro.
+          \item けっこん　しています。\\
+                Est\'a casado.
+        \end{enumerate}
+
+      \subsubsection{Acci\'ones rutinarias o de larga duraci\'on:}
+        \fbox{\bv(て) います}
+
+        \begin{itemize}
+          \item スーパー　で　せっけん　を　うっています。\\
+                Se vende jab\'on en el supermercado.
+          \item \ruby{松本}{まつもと}さん　は　ABCで　はたらいています。\\
+                El Sr.Matsumoto trabaja en la empresa ABC.
+          \item まいあさ　ジョギング　を　しています。\\
+                Corro todas las mañanas.
+        \end{itemize}
+        \hfill
+
+        Las acciones rutinarias del pasado se expresan con \bv(て) いました.
+
+        \begin{itemize}
+          \item まえに　テニス　を　していましたが、今　は　していません。\\
+                Antes jugaba al tenis pero ahora no juego.
+        \end{itemize}
+
+      \subsubsection{Aprobar lo dicho por el hablante:}
+        \fbox{「はい」と「いいえ」}
+
+        \begin{itemize}
+          \item
+            \begin{itemize}
+              \item[-] さしみ　は　食べませんか。\\
+                       >No come Sashimi?
+              \item[-] はい、食べません。\\
+                       No, no como.
+              \item[-] いいえ、食べます。\\
+                       S\'i, como.
+            \end{itemize}
+          \item
+            \begin{itemize}
+              \item[-] その　肉　は　おいしくないですか。\\
+                       >Esa carne no es rica?
+              \item[-] ええ、あまり　おいしくないです。\\
+                       No, no es rica.
+              \item[-] いいえ、おいしいです。\\
+                       S\'i, es rica.
+            \end{itemize}
+        \end{itemize}
+
+%========================================
+
     \section{Lección 16}
 
       \subsubsection{Secuencial, dos o mas verbos ocurren en secuencia:}
-      \fbox{\vi(て)、\vn(て)、。。。、\vs(ます)}
-      \\
+        \fbox{\vi(て)、\vn(て)、\tenten、\vene(ます)}
 
-      カルロすさん　は　あさ、ジョギング　を　して、シャワー　を　あびて、大学へ行きます。\\
-      \indent Carlos corre por la mañana, se da un baño, y va a la facultad.
-      \\
+        \begin{itemize}
+          \item カルロすさん　は　あさ、ジョギング　を　して、シャワー　を　あびて、大学へ行きます。\\
+                Carlos corre por la mañana, se da un baño, y va a la facultad.
+        \end{itemize}
+
+        \subparagraph{Atenci\'on:}
+          Las acciones deben estar en un orden coherente.
 
       \subsubsection{Acciones que se realizan luego de concluir otra:}
-      \fbox{\vi(て)から、\vn(ます)}
-      \\
+        \fbox{\vi(て)から、\vn(ます)}
 
-      ふるさと　へ　かえって　から、父の\ruby{会社}{かいしゃ}で　はたらきます。\\
-      \indent Después de volver a mi pueblo natal, voy a trabajar en la empresa de mi padre.
-      \\
+        \begin{itemize}
+          \item ふるさと　へ　かえって　から、父の\ruby{会社}{かいしゃ}で　はたらきます。\\
+                Despu\'es de volver a mi pueblo natal, voy a trabajar en la empresa de mi padre.
+          \item えいが　が　おわって　から、レストランで\ruby{食事}{しょくじ}しました。\\
+                Despu\'es de terminar la pel\'icula, fui a comer a un restor\'an.
+        \end{itemize}
 
-      えいが　が　おわって　から、レストランで\ruby{食事}{しょくじ}しました。\\
-      \indent Después de terminar la película, fui a comer a un restorán.
+      \subsubsection{Conectar oraciones que usan い-adjetivos:}
+        \fbox{\adj-い(〜い×)　\to　〜くて、\tenten}
 
-    \section{Lección 17}
+        \begin{itemize}
+          \item マリアさん　は　わかくて、\ruby{元気}{げんき}です。\\
+                Mar\'ia es joven y saludable.
+          \item きのう　は　てんきが　よくて、すこし　あつかったです。\\
+                Ayer hixo buen clima y estuvo un poco caluroso.
+        \end{itemize}
+
+      \subsubsection{Conectar oraciones que usan な-adjetivos o sustantivos:}
+        \fbox{\bs/\adj-な(な×)　\to　で}
+
+        \begin{itemize}
+          \item パブロさん　は　ハンサムで、しせつです。\\
+                Pablo es apuesto y amable.
+          \item サンパウロ　は　にぎやかで、おもしとい　です。\\
+                San Pablo es movida e interesante.
+        \end{itemize}
+
+      \subsubsection{Causa o motivo:}
+        \fbox{\vi(て)、\tenten、\vene(ます)}
+
+        \begin{itemize}
+          \item 風を　ひいて、じゅぎょう　を　休みました。\\
+                Como estoy resfriado, falt\'e a clase.
+          \item しゅくだい　が　たくさん　あって、いぞがしいです。\\
+                Como tengo muchos deberes, estoy ocupado.
+        \end{itemize}
+
+%========================================
+
+    \section{Lección 17 - Forma ない (ない\ruby{形}{けい})}
+
+        \subsubsection{Grupo 1}
+        \begin{tabular}{ | l | l | }
+          \hline
+          \cellcolor[gray]{0.9} Forma ます & \cellcolor[gray]{0.9} Forma ない\\
+          \hline
+          きます　& こない\\
+          \hline
+        \end{tabular}
 
       \subsubsection{Indicar que no haga algo:}
-      \fbox{\vb(ない) + ないで　ください}
-      \\
+        \fbox{\bv(ない) + ないで　ください}
 
-      ここ　で　しゃしん　を　とらない　で　ください。\\
-      \indent No saque fotos aquí.
+        \begin{itemize}
+          \item ここ　で　しゃしん　を　とらない　で　ください。\\
+                No saque fotos aquí.
+          \item かさ　を　わすれないで　ください。\\
+                No se olvide del paraguas.
+          \item あまり　たばこ　を　すわないで　ください。\\
+                No fume tanto.
+        \end{itemize}
 
       \subsubsection{Algo debe hacerse, por obligación o sin la voluntad:}
-      \fbox{\vb(ない) + なければ　なりません}
-      \\
+        \fbox{\bv(ない) + なければ　なりません}
 
-      しゅくだい　を　しなければ　なりません。\\
-      \indent Debo hacer los deberes.
+        \begin{itemize}
+          \item しゅくだい　を　しなければ　なりません。\\
+                Debo hacer los deberes.
+          \item 日本の\ruby{家}{うち}で　くつ　を　ぬがなければ　なりません。\\
+                En las casas japonesas se debe quitar los zapatos.
+        \end{itemize}
 
       \subsubsection{No es necesario hacer algo:}
-      \fbox{\vb(ない) + なくても　いいです}
-      \\
+        \fbox{\bv(ない) + なくても　いいです}
 
-      お金を　はわらなくても　いいです。\\
-      \indent No es necesario que pague.
+        \begin{itemize}
+          \item お金を　はわらなくても　いいです。\\
+                No es necesario que pague.
+        \end{itemize}
 
       \subsubsection{Medios o situación al realizar una acción:}
-      \fbox{\vi(て)、\vn}
-      \\
+        \fbox{\vi(て)、\vn}
 
-      コーヒー　に　さとう　を　入れて　\ruby{飲}{の}みます。\\
-      \indent Tomo caf\'e con azúcar.
-　　　　\\
-
-      私は　いつも　たって　アイロン　を　かけます。\\
-      \indent Siempre plancho parado.
+        \begin{itemize}
+          \item コーヒー　に　さとう　を　入れて　\ruby{飲}{の}みます。\\
+                Tomo caf\'e con azúcar.
+　　　　    \item 私は　いつも　たって　アイロン　を　かけます。\\
+                Siempre plancho parado.
+        \end{itemize}
 
       \subsubsection{Medios o situación al realizar una acción con forma negativa:}
-      \fbox{\vi(ない) + ないで、\vn}
-      \\
+        \fbox{\vi(ない) + ないで、\vn}
 
-      は　を　みがかないで　ねました。\\
-      \indent Me acost\'e sin lavarme los dientes.
-      \\
+        \begin{itemize}
+          \item は　を　みがかないで　ねました。\\
+                Me acost\'e sin lavarme los dientes.
+          \item さとう　入れないで、コーヒー　を　\ruby{飲}{の}みました。\\
+                Tom\'e el caf\'e sin az\'ucar.
+        \end{itemize}
 
-      さとう　入れないで、コーヒー　を　\ruby{飲}{の}みました。\\
-      \indent Tom\'e el caf\'e sin az\'ucar.
+%========================================
 
+    \section{Lección 18 - Forma じしょ(辞書\ruby{形}{けい})}
 
-  %============================================== Capitulo 2 - End
+        \subsubsection{Grupo 1}
+        \begin{tabular}{ | l | l | }
+          \hline
+          \cellcolor[gray]{0.9} Forma ます & \cellcolor[gray]{0.9} Forma じしょ\\
+          \hline
+          きます　& くる\\
+          \hline
+        \end{tabular}
 
-  %============================================== Capitulo Kanji
+      \subsubsection{Verbo como sustantivo:}
+        \fbox{\bv(じしょ) + こと}
 
-  \chapter{Kanji}
+      \subsubsection{Pasatiempo:}
+        \fbox{しゅみ　は　\bv(じしょ) + ことです}
+
+        \begin{itemize}
+          \item 私の　しゅみ　は　\ruby{音楽}{おんがく}です。\\
+                Mi pasatiempo es la m\'usica.
+          \item 私の　しゅみ　は　\ruby{音楽}{おんがく}　を　きく　ことです。\\
+                Mi pasatiempo es escuchar m\'usica.
+          \item しゅみ　は　\ruby{音楽}{おんがく}　を　えんそうする　ことです。\\
+                Mi pasatiempo es tocar m\'usica.
+        \end{itemize}
+
+      \subsubsection{Pasatiempo:}
+        \fbox{しゅみ　は　\bv(じしょ) + ことです}
+
+        \begin{itemize}
+          \item 私の　しゅみ　は　\ruby{音楽}{おんがく}です。\\
+                Mi pasatiempo es la m\'usica.
+          \item 私の　しゅみ　は　\ruby{音楽}{おんがく}　を　きく　ことです。\\
+                Mi pasatiempo es escuchar m\'usica.
+          \item しゅみ　は　\ruby{音楽}{おんがく}　を　えんそうする　ことです。\\
+                Mi pasatiempo es tocar m\'usica.
+        \end{itemize}
+
+      \subsubsection{Gustos:}
+        \fbox{\bs は　\bv(じしょ) + ことが　すきです}
+
+        \begin{itemize}
+          \item 私は　サッカーが　すきです。\\
+                Me gusta el f\'utbol.
+          \item 私は　サッカーを　見ることが　すきです。\\
+                Me gusta mirar f\'utbol.
+        \end{itemize}
+
+        \subparagraph{Atenci\'on:}
+          Se puede usar「の」en lugar de「こと」para hacer la frase un poco informal:
+
+        \begin{itemize}
+          \item サッカーを　する のが　すきです。\\
+                Me gusta jugar al f\'utbol.
+          \item え　を　かく　のが　すきです。\\
+                Me gusta pintar.
+        \end{itemize}
+
+      \subsubsection{Ser capaz; es posible:}
+        \fbox{\bs/\bv(じしょ) こと　が　できます}
+
+        \subparagraph{Con sustantivo:}
+
+        \begin{itemize}
+          \item マリアさん　は　日本語　が　できます。\\
+                Mar\'ia sabe japon\'es.
+          \item \ruby{雪}{ゆき}が　たくさん　ふりました　から、ことし　は　スキー　が　できます。\\
+                Como nev\'o mucho, este año se puede esquiar.
+        \end{itemize}
+
+        \subparagraph{Con verbo:}
+
+        \begin{itemize}
+          \item マリアさん　は　かんじ　を　よむこと　が　できます。\\
+                Mar\'ia sabe leer kanji.
+          \item としょかんで　本を　かりることが　できまう。\\
+                Se puede pedir libros en la biblioteca.
+        \end{itemize}
+
+        \subparagraph{Atenci\'on:}
+          Se puede usar el verbo できます para indicar una acci\'on que se cumple y concluye, indicando el lugar con la part\'icula に.
+
+        \begin{itemize}
+          \item えきの\ruby{前}{まえ}に大きいスーパーができました。\\
+                Hicieron un supermercado grande frente a la estaci\'on de trenes.
+          \item
+            \begin{itemize}
+              \item[-] とけい　の　しゅうり　は　いつ　できますか。\\
+                       >Cu\'ando terminar\'a la reparaci\'on del reloj?
+              \item[-] あした　できます。\\
+                       La terminar\'e mañana.
+            \end{itemize}
+        \end{itemize}
+
+      \subsubsection{Un acontecimiento ocurre antes que otro:}
+        \fbox{\bsの/\vi(じしょ)/cuantificador de tiempo　まえに、\vn}
+
+        \subparagraph{Con verbo:}
+
+        El tiempo verbal se indica al final de la oraci\'on:
+
+        \begin{itemize}
+          \item ウルグアイに来る前にスペイン語をべんきょうしました。\\
+                Antes de venir a uruguay estudi\'e español.
+          \item ねる前に本をよみます。\\
+                Antes de dormir leo un libro.
+        \end{itemize}
+
+        \subparagraph{Con sustantivo:}
+
+        Se le agrega la part\'icula の al sustantivo:
+
+        \begin{itemize}
+          \item \ruby{食事}{しょくじ}の前に手をあらいます。\\
+                Antes de comer me lavo las manos.
+        \end{itemize}
+
+        \subparagraph{Con cuantificador (per\'iodo de tiempo):}
+
+        Se le agrega el cuantificador y no se usa の:
+
+        \begin{itemize}
+          \item 田中さんはー時間まえに出かけました。\\
+                El Sr.Tanaka sali\'o hace una hora.
+        \end{itemize}
+
+%========================================
+
+\chapter{Kanji}
   \thispagestyle{contenido} % no sacar
   \pagestyle{contenido}     % no sacar
 
@@ -227,7 +608,6 @@
 % \end{tabular}
 % \end{minipage}
 % \end{table}
-
   %============================================== Bibliografia
 
 %   \begin{thebibliography}{20}

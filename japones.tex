@@ -29,6 +29,24 @@
 \def\vene{$\mathrm{\bv}_\mathrm{\textbf{n}}$} % verbo ene
 \def\tenten{。。。}
 
+\newenvironment{changemargin}{%
+ \begin{list}{}{%
+\setlength{\textwidth}{\paperwidth}
+\setlength{\textheight}{\paperheight}
+%\setlength{\oddsidemargin}{-1in}
+%\setlength{\evensidemargin}{-1in}
+% \setlength{\topmargin}{-1in}
+% \setlength{\topsep}{-1in}%
+   \setlength{\leftmargin}{-0.7in}%
+   \setlength{\rightmargin}{0.4in}%
+   \setlength{\listparindent}{\parindent}%
+   \setlength{\itemindent}{\parindent}%
+   \setlength{\parsep}{\parskip}%
+ }%
+%\centering%
+\item[]%
+}{\end{list}}
+
 %----------------------------------------------
 % Documento
 
@@ -600,8 +618,10 @@
   \thispagestyle{contenido} % no sacar
   \pagestyle{contenido}     % no sacar
 
-%\begin{multicols}{2}
-%
+\begin{changemargin}
+
+\begin{multicols}{2}
+
 %   \begin{tabular}{rl}
 %     \fbox{\Huge 月}
 %     &
@@ -613,7 +633,7 @@
 %       mes, luna
 %     \end{tabular}
 %   \end{tabular}
-%
+% 
 %   \begin{tabular}{rl}
 %     \fbox{\Huge 金}
 %     &
@@ -625,7 +645,7 @@
 %       oro, dinero, metal \\
 %     \end{tabular}
 %   \end{tabular}
-%
+% 
 %   \begin{tabular}{rl}
 %     \fbox{\Huge 食}
 %     &
@@ -637,14 +657,13 @@
 %       comer
 %     \end{tabular}
 %   \end{tabular}
-% \end{multicols}
 
   \begin{minipage}{1.1in}
     \begin{tikzpicture}
       \node[scale=5] {月};
     \end{tikzpicture}
   \end{minipage}
-  \begin{minipage}{3in}
+  \begin{minipage}{2in}
     \begin{tabular}{l}
       ゲツ, ガツ \\
       mes, luna \\
@@ -659,7 +678,7 @@
       \node[scale=5] {金};
     \end{tikzpicture}
   \end{minipage}
-  \begin{minipage}{3in}
+  \begin{minipage}{2in}
     \begin{tabular}{l}
       キン, コン \\
       oro \\
@@ -674,7 +693,7 @@
       \node[scale=5] {食};
     \end{tikzpicture}
   \end{minipage}
-  \begin{minipage}{3in}
+  \begin{minipage}{2in}
     \begin{tabular}{l}
       ショク, 「ジキ」 \\
       alimento, comida, eclipse\\
@@ -684,28 +703,9 @@
     \end{tabular}
   \end{minipage}
 
-% \begin{table}[ht]
-% \begin{minipage}[b]{0.5\linewidth}\centering
-%   \begin{tabular}{|c|c|c|}
-%   \hline
-%   1&1&1\\
-%   \hline
-%   2&2&2\\
-%   \hline
-%   \end{tabular}
-% \end{minipage}
-% \hspace{0.5cm}
-% \begin{minipage}[b]{0.5\linewidth}
-% \centering
-% \begin{tabular}{|c|c|c|}
-% \hline
-% 1&1&1\\
-% \hline
-% 2&2&2\\
-% \hline
-% \end{tabular}
-% \end{minipage}
-% \end{table}
+\end{multicols}
+\end{changemargin}
+
   %============================================== Bibliografia
 
 %   \begin{thebibliography}{20}

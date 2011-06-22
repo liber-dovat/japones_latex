@@ -7,6 +7,8 @@
 %\usepackage[bw]{colorful}
 \usepackage{tikz}
 
+\usepackage{multicol}
+
 % para usar las bullets redondas para marcar los elementos de las listas
 % \renewcommand{\labelitemi}{$\bullet$}
 
@@ -116,7 +118,7 @@
         \end{itemize}
 
       \subsubsection{Conjugaci\'on, progreso de la acci\'on:}
-        \fbox{\bv(て) + います}
+        \fbox{\vi(て) + います}
 
         \begin{itemize}
           \item マリアさん　は　パブロさんと　はなして　います。\\
@@ -315,13 +317,13 @@
         \end{itemize}
 
       \subsubsection{Conectar oraciones que usan い-adjetivos:}
-        \fbox{\adj-い(〜い×)　\to　〜くて}
+        \fbox{\adj-い(〜い×)　\to　〜くて、\tenten}
 
         \begin{itemize}
           \item マリアさん　は　わかくて、\ruby{元気}{げんき}です。\\
                 Mar\'ia es joven y saludable.
           \item きのう　は　てんきが　よくて、すこし　あつかったです。\\
-                Ayer hizo buen clima y estuvo un poco caluroso.
+                Ayer hixo buen clima y estuvo un poco caluroso.
         \end{itemize}
 
       \subsubsection{Conectar oraciones que usan な-adjetivos o sustantivos:}
@@ -541,10 +543,49 @@
   \thispagestyle{contenido} % no sacar
   \pagestyle{contenido}     % no sacar
 
-  \begin{minipage}{1.2in}
-      \begin{tikzpicture}
-        \node[scale=5] {月};
-      \end{tikzpicture}
+%\begin{multicols}{2}
+%
+%   \begin{tabular}{rl}
+%     \fbox{\Huge 月}
+%     &
+%     \begin{tabular}{l}
+%       ゲツ, ガツ \\
+%       mes, luna \\
+%       \\
+%       つき \\
+%       mes, luna
+%     \end{tabular}
+%   \end{tabular}
+%
+%   \begin{tabular}{rl}
+%     \fbox{\Huge 金}
+%     &
+%     \begin{tabular}{l}
+%       キン, コン \\
+%       oro \\
+%       \\
+%       かね, かな \\
+%       oro, dinero, metal \\
+%     \end{tabular}
+%   \end{tabular}
+%
+%   \begin{tabular}{rl}
+%     \fbox{\Huge 食}
+%     &
+%     \begin{tabular}{l}
+%       ショク, 「ジキ」 \\
+%       alimento, comida, eclipse\\
+%       \\
+%       く.う, 「く.らう」, た.べる \\
+%       comer
+%     \end{tabular}
+%   \end{tabular}
+% \end{multicols}
+
+  \begin{minipage}{1.1in}
+    \begin{tikzpicture}
+      \node[scale=5] {月};
+    \end{tikzpicture}
   \end{minipage}
   \begin{minipage}{3in}
     \begin{tabular}{l}
@@ -556,10 +597,10 @@
     \end{tabular}
   \end{minipage}
 
-  \begin{minipage}{1.2in}
-      \begin{tikzpicture}
-        \node[scale=5] {金};
-      \end{tikzpicture}
+  \begin{minipage}{1.1in}
+    \begin{tikzpicture}
+      \node[scale=5] {金};
+    \end{tikzpicture}
   \end{minipage}
   \begin{minipage}{3in}
     \begin{tabular}{l}
@@ -571,10 +612,10 @@
     \end{tabular}
   \end{minipage}
 
-  \begin{minipage}{1.2in}
-      \begin{tikzpicture}
-        \node[scale=5] {食};
-      \end{tikzpicture}
+  \begin{minipage}{1.1in}
+    \begin{tikzpicture}
+      \node[scale=5] {食};
+    \end{tikzpicture}
   \end{minipage}
   \begin{minipage}{3in}
     \begin{tabular}{l}

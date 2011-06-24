@@ -196,6 +196,19 @@
   {\color{Cabezal}{#1}}
 } % ColCabezal
 
+% defino la caja y colores para hacer el enfasis
+
+\definecolor{EmphBlue}{RGB}{67,75,178}
+\newcommand{\ColEmph}[1]{{\color{EmphBlue}{\textbf{#1}}}}% \ColEmph
+\if@bw%
+\renewcommand{\ColEmph}[1]{{\textbf{#1}}}% \ColEmph
+\fi % if
+
+\newcommand{\BoxEmph}[1]{{#1}}% BoxEmph
+\if@bw%
+\renewcommand{\BoxEmph}[1]{{\fbox{\ColEmph{#1}}}}% BoxEmph
+\fi % if
+
 %----------------------------------------------
 
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}

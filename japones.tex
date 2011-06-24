@@ -3,8 +3,8 @@
 %----------------------------------------------
 % Preambulo
 
-%\usepackage{colorful}
-\usepackage[bw]{colorful}
+\usepackage{colorful}
+%\usepackage[bw]{colorful}
 \usepackage{tikz}
 
 \usepackage{multicol}
@@ -14,6 +14,7 @@
 
 \usepackage{CJKutf8}
 
+% para escribir los furiganas
 \usepackage[CJK, overlap]{ruby}
 \renewcommand{\rubysep}{-0.2ex}
 
@@ -30,21 +31,17 @@
 \def\vene{$\mathrm{\bv}_\mathrm{\textbf{n}}$} % verbo ene
 \def\tenten{。。。}
 
+% modifico los margenes para la parte de los kanjis
 \newenvironment{changemargin}{%
  \begin{list}{}{%
 \setlength{\textwidth}{\paperwidth}
 \setlength{\textheight}{\paperheight}
-%\setlength{\oddsidemargin}{-1in}
-%\setlength{\evensidemargin}{-1in}
-% \setlength{\topmargin}{-1in}
-% \setlength{\topsep}{-1in}%
    \setlength{\leftmargin}{-0.7in}%
    \setlength{\rightmargin}{0.4in}%
    \setlength{\listparindent}{\parindent}%
    \setlength{\itemindent}{\parindent}%
    \setlength{\parsep}{\parskip}%
  }%
-%\centering%
 \item[]%
 }{\end{list}}
 
@@ -162,7 +159,7 @@
         \fbox{\bv(て) + ください}
 
         \begin{itemize}
-          \item すみませんが、かんじの　よみ方を　おひえてください。\\
+          \item すみませんが、かんじの　よみ方を　おしえてください。\\
                 Disculpe, >Podr\'ia enseñarme c\'omo leer kanji? (solicitud)
           \item ぜひ　あそびに　\ruby{来}{き}て　ください。\\
                 No deje de visitarnos. (invitaci\'on)
@@ -171,7 +168,7 @@
         \end{itemize}
 
       \subsubsection{Conjugaci\'on, progreso de la acci\'on:}
-        \fbox{\vi(て) + います}
+        \fbox{\bv(て) + います}
 
         \begin{itemize}
           \item マリアさん　は　パブロさんと　はなして　います。\\
@@ -206,12 +203,12 @@
         \end{itemize}
 
       \subsubsection{Realizar dos acciones simultaneamente:}
-        \fbox{\vi(ます) + ながら、\vn}
+        \fbox{\vi(ます×) + ながら、\vn}
 
         \begin{itemize}
           \item \ruby{音楽}{おんがく}　を　ききながら　\ruby{食事}{しょくじ}します。\\
                 Como escuchando m\'usica.
-          \item コーヒー　を　おみながら　べんきょうします。\\
+          \item コーヒー　を　のみながら　べんきょうします。\\
                 Estudio tomando caf\'e.
         \end{itemize}
         \hfill
@@ -280,7 +277,7 @@
                 Conozco al Sr. Tanaka.
           \item パブロさん　は　カネローネス　に　住んでいます。\\
                 Pablo vive en Canelones.
-          \item 私は　カメラ　を　持っていあす。\\
+          \item 私は　カメラ　を　持っています。\\
                 Tengo una c\'amara.
           \item マリアさん　は　すわっています。\\
                 Mar\'ia est\'a sentada.
@@ -329,18 +326,18 @@
               \item[-] さしみ　は　食べませんか。\\
                        >No come Sashimi?
               \item[-] はい、食べません。\\
-                       No, no como.
+                       S\'i, no como.
               \item[-] いいえ、食べます。\\
-                       S\'i, como.
+                       No, como.
             \end{itemize}
           \item
             \begin{itemize}
               \item[-] その　肉　は　おいしくないですか。\\
                        >Esa carne no es rica?
               \item[-] ええ、あまり　おいしくないです。\\
-                       No, no es rica.
+                       S\'i, no es rica.
               \item[-] いいえ、おいしいです。\\
-                       S\'i, es rica.
+                       No, es rica.
             \end{itemize}
         \end{itemize}
 
@@ -390,7 +387,7 @@
         \end{itemize}
 
       \subsubsection{Causa o motivo:}
-        \fbox{\vi(て)、\tenten、\vene(ます)}
+        \fbox{\vi(て)、\tenten、\vn(ます)}
 
         \begin{itemize}
           \item 風を　ひいて、じゅぎょう　を　休みました。\\
@@ -446,7 +443,7 @@
         \end{tabular}
 
       \subsubsection{Indicar que no haga algo:}
-        \fbox{\bv(ない) + ないで　ください}
+        \fbox{\bv(ない) + で　ください}
 
         \begin{itemize}
           \item ここ　で　しゃしん　を　とらない　で　ください。\\
@@ -486,7 +483,7 @@
         \end{itemize}
 
       \subsubsection{Medios o situación al realizar una acción con forma negativa:}
-        \fbox{\vi(ない) + ないで、\vn}
+        \fbox{\vi(ない) で、\vn}
 
         \begin{itemize}
           \item は　を　みがかないで　ねました。\\
@@ -779,11 +776,11 @@
     \item Solicitar, dar instrucciones o consejos:\\
           \bv(て)ください
     \item Conjugaci\'on, progreso de la acci\'on:\\
-          \vi(て)います
+          \bv(て)います
     \item Ofrecerce para realizar una acci\'on:\\
           \bvましょうか
     \item Realizar dos acciones simultaneamente:\\
-          \vi(ます)ながら、\vn
+          \vi(ます×)ながら、\vn
     \item Se puede; dar permiso:\\
           \bv(て)もいいです
     \item No se puede:\\
@@ -797,13 +794,13 @@
     \item Acciones que se realizan luego de concluir otra:\\
           \vi(て)から、\vn(ます)
     \item Conectar oraciones que usan い-adjetivos:\\
-          \adj-い(〜い×)\to〜くて、\tenten
+          \adj-い(い×)\to〜くて、\tenten
     \item Conectar oraciones que usan な-adjetivos o sustantivos:\\
           \bs / \adj-な(な×)\toで
     \item Causa o motivo:\\
-          \vi(て)、\tenten、\vene(ます)
+          \vi(て)、\tenten、\vn(ます)
     \item Indicar que no haga algo:\\
-          \bv(ない)ないでください
+          \bv(ない)でください
     \item Algo debe hacerse, por obligación o sin la voluntad:\\
           \bv(ない)なければなりません
     \item No es necesario hacer algo:\\
@@ -811,7 +808,7 @@
     \item Medios o situación al realizar una acción:\\
           \vi(て)、\vn
     \item Medios o situación al realizar una acción con forma negativa:\\
-          \vi(ない)ないで、\vn
+          \vi(ない) で、\vn
     \item Verbo como sustantivo:\\
           \bv(じしょ)こと
     \item Pasatiempo: (1)\\
@@ -831,9 +828,9 @@
     \item Secuencia de acciones:\\
           \vi(た) / \bs {の} + あとで、\vn
     \item Cambio de una situaci\'on anterior (involuntaria):\\
-          \adj-い(〜い×){く} / \adj-な(〜な×){に} / \bs{に} なりました
+          \adj-い(い×){く} / \adj-な(な×){に} / \bs{に} なりました
     \item Cambio de una situaci\'on anterior (voluntaria):\\
-          \adj-い(〜い×){く} / \adj-な(〜な×){に} / \bs{に} しました
+          \adj-い(い×){く} / \adj-な(な×){に} / \bs{に} しました
   \end{itemize}
 
 %========================================

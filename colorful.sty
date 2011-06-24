@@ -3,14 +3,14 @@
 
 \ProvidesPackage{colorful}
 
-%----------------------------------------------
+%========================================
 
 % color options
 % blue (default option)
-\DeclareOption{color}{}
+%\DeclareOption{color}{}
 
 % blanco y negro
-\newif\if@bw\@bwfalse
+\newif\if@bw
 \DeclareOption{bw}{\@bwtrue}
 
 % unused options
@@ -18,12 +18,12 @@
   \PackageWarning{colorful}{Unknown option ‘\CurrentOption’}}
 
 % execute default options
-\ExecuteOptions{color}
+%\ExecuteOptions{color}
 
 % process given options
 \ProcessOptions\relax
 
-%----------------------------------------------
+%========================================
 
 % Para que setee las palabras automaticas al espanol (capitulo, indice, etc)
 \usepackage[spanish]{babel}
@@ -31,7 +31,7 @@
 % Para poder escribir con chirimbolos raros como letras con tildes y eñes.
 %\usepackage[utf8]{inputenc}
 
-%----------------------------------------------
+%========================================
 
 % Para agregar enlaces dinamicos
 \usepackage{hyperref}
@@ -43,7 +43,7 @@
   urlcolor   = black
 }
 
-%----------------------------------------------
+%========================================
 % Fuentes
 
 % Para usar la fuente times, tambien con serif
@@ -55,30 +55,31 @@
 % Para utilizar una fuente sans-serif
 %\renewcommand{\familydefault}{\sfdefault}
 
-%----------------------------------------------
+%========================================
 
 % Para hacer rotaciones
 \usepackage{rotating}
 \usepackage[center]{caption}
 
-%----------------------------------------------
+%========================================
 
+% modifico los margenes
 \usepackage[left=4cm,top=3cm,right=3cm,bottom=3cm]{geometry}
 
-%----------------------------------------------
+%========================================
 
 % Para incluir imagenes, diagramas y esas cosas.
 \usepackage{graphicx}
 
-%----------------------------------------------
+%========================================
 
 \newcommand{\Titulo}{Japon\'es}
 \newcommand{\Subtitulo}{Resumen}
 
-% Los paquetes de fancy header
+% Los paquetes de fancy header usados para editar la apariencia de las paginas
 \usepackage{fancyhdr}
 
-%=============================================
+%----------------------------------------
 
 % Redefino el estilo de pagina plain para que sea la plantilla de indice
 \fancypagestyle{plain}{%
@@ -101,7 +102,7 @@
       } % \rfoot
 } % \fancypagestyle{plain}
 
-%=============================================
+%----------------------------------------
 
 % Creo un estilo nuevo con la informacion que usan las paginas del documento
 % Tengo que recordar siempre que se deben setear \thispagestyle y \pagestyle luego
@@ -127,7 +128,7 @@
       } % \rfoot
 }% \fancypagestyle{contenido}
 
-%=============================================
+%----------------------------------------
 
 % Creo un estilo nuevo con la informacion que usan las paginas del documento
 % Tengo que recordar siempre que se deben setear \thispagestyle y \pagestyle luego
@@ -152,14 +153,14 @@
       } % \rfoot
 }% \fancypagestyle{contenido}
 
-%=============================================
+%----------------------------------------
 
 \fancyfootoffset{50pt}
 
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-%----------------------------------------------
+%========================================
 
 % Defino los colores que voy a usar
 
@@ -178,8 +179,9 @@
   \definecolor{Cabezal}{RGB}{189,189,189} % cabezal
 \fi % if
 
-%===
+%-----
 
+% redefino los comandos para los colores
 \newcommand{\ColPagina}[1]{%
   {\color{Pagina}{#1}}
 } % ColPagina
@@ -197,7 +199,6 @@
 } % ColCabezal
 
 % defino la caja y colores para hacer el enfasis
-
 \definecolor{EmphBlue}{RGB}{67,75,178}
 \newcommand{\ColEmph}[1]{{\color{EmphBlue}{\textbf{#1}}}}% \ColEmph
 \if@bw%
@@ -209,7 +210,7 @@
 \renewcommand{\BoxEmph}[1]{{\fbox{\ColEmph{#1}}}}% BoxEmph
 \fi % if
 
-%----------------------------------------------
+%========================================
 
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \renewcommand{\sectionmark}[1]{\markright{#1}{}}
@@ -224,7 +225,7 @@
 % el numero de seccion es: #capitulo.#seccion
 \renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
 
-%----------------------------------------------
+%========================================
 
 % Marginpar: asi se usa
 % \marginpar{This is the new marginpar command. This is the new marginpar command.}
@@ -235,7 +236,7 @@
   {\raggedright\scriptsize #1}%
 } % \renewcommand\marginpar
 
-%----------------------------------------------
+%========================================
 
 %   \title{}
 %   \author{}

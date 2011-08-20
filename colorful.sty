@@ -31,6 +31,18 @@
 % Para poder escribir con chirimbolos raros como letras con tildes y eñes.
 %\usepackage[utf8]{inputenc}
 
+% Para imagenes, diagramas y esas cosas.
+% \usepackage{pgf}
+% \usepackage{tikz}
+
+% Para agregar codigo fuente
+% \usepackage{listings}
+
+%=============================================
+% Definiciones
+
+\def\todo{{\ColRed{\underline{TO DO}}}}
+
 %========================================
 
 % Para agregar enlaces dinamicos
@@ -73,8 +85,8 @@
 
 %========================================
 
-\newcommand{\Titulo}{Japon\'es}
-\newcommand{\Subtitulo}{Resumen}
+\newcommand{\Titulo}{}
+\newcommand{\Subtitulo}{}
 
 % Los paquetes de fancy header usados para editar la apariencia de las paginas
 \usepackage{fancyhdr}
@@ -197,6 +209,10 @@
 \newcommand{\ColCabezal}[1]{%
   {\color{Cabezal}{#1}}
 } % ColCabezal
+
+\newcommand{\ColRed}[1]{%
+  {\color{red}{#1}}
+} % ColLightLightBlue
 
 % defino la caja y colores para hacer el enfasis
 \definecolor{EmphBlue}{RGB}{67,75,178}
